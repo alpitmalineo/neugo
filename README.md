@@ -119,88 +119,88 @@ Row Preference: Front (1-4), Center(5-7), Back(8-11)
         }
 
                       
-3.) BookSeat endpoint
-   - http://127.0.0.1:8000/v1/book_seat/   method:POST
-
-   - Input Example:
-   - Note here bus:1 is NueGo or bus:2 is GreenGo     
-   - For Single Seat Booking
-      {
-        "bus": 1,
-        "seat": [
-            {
-                "prefer_row": "Front",
-                "prefer_seat": "Window",
-                "seat_number": 1
-            }
-     
-        ]
-
-    }
-
-  - For multiple Seat Booking
-
-    {
-    "bus": 1,
-    "seat": [
+    3.) BookSeat endpoint
+      - http://127.0.0.1:8000/v1/book_seat/   method:POST
+      
+      - Input Example:
+      - Note here bus:1 is NueGo or bus:2 is GreenGo     
+      - For Single Seat Booking
         {
-            "prefer_row": "Front",
-            "prefer_seat": "Window",
-            "seat_number": 1
-        },
-        {
-            "prefer_row": "Center",
-            "prefer_seat": "Aisle",
-            "seat_number": 6
-        }
+          "bus": 1,
+          "seat": [
+              {
+                  "prefer_row": "Front",
+                  "prefer_seat": "Window",
+                  "seat_number": 1
+              }
        
-    ]
-   }
-
-   - Multiple Seat Output Example
-     {
-            "id": 88,
-            "user": {
-                "id": 1,
-                "email": "admin@gmail.com",
-                "name": "admin",
-                "is_active": true
-            },
-            "bus": {
-                "id": 1,
-                "coach": "NueGO",
-                "departure_city": 1,
-                "destination_city": 6,
-                "date": "2023-09-05",
-                "hours": "6h 20m",
-                "boarding_point": "Abohar bridge",
-                "dropping_point": "Amritsar Highway",
-                "departure_time": "06:00:00",
-                "destination_time": "18:00:00",
-                "price": 350
-            },
-            "seat": [
-                    {
-                        "prefer_row": "Front",
-                        "prefer_seat": "Window",
-                        "seat_number": "1",
-                        "is_booked": true,
-                        "created_at": "2023-09-11T06:50:56.206245Z",
-                        "updated_at": "2023-09-11T06:50:56.206288Z"
-                    },
-                    {
-                        "prefer_row": "Center",
-                        "prefer_seat": "Aisle",
-                        "seat_number": "6",
-                        "is_booked": true,
-                        "created_at": "2023-09-11T06:50:56.206337Z",
-                        "updated_at": "2023-09-11T06:50:56.206355Z"
-                    }
-                ],
-                "total_passengers": 2,
-                "created_at": "2023-09-11T06:50:56.201649Z",
-                "updated_at": "2023-09-11T06:50:56.201683Z"
-       }
+          ]
+      
+      }
+      
+      - For multiple Seat Booking
+      
+      {
+      "bus": 1,
+      "seat": [
+          {
+              "prefer_row": "Front",
+              "prefer_seat": "Window",
+              "seat_number": 1
+          },
+          {
+              "prefer_row": "Center",
+              "prefer_seat": "Aisle",
+              "seat_number": 6
+          }
+         
+      ]
+      }
+      
+      - Multiple Seat Output Example
+       {
+              "id": 88,
+              "user": {
+                  "id": 1,
+                  "email": "admin@gmail.com",
+                  "name": "admin",
+                  "is_active": true
+              },
+              "bus": {
+                  "id": 1,
+                  "coach": "NueGO",
+                  "departure_city": 1,
+                  "destination_city": 6,
+                  "date": "2023-09-05",
+                  "hours": "6h 20m",
+                  "boarding_point": "Abohar bridge",
+                  "dropping_point": "Amritsar Highway",
+                  "departure_time": "06:00:00",
+                  "destination_time": "18:00:00",
+                  "price": 350
+              },
+              "seat": [
+                      {
+                          "prefer_row": "Front",
+                          "prefer_seat": "Window",
+                          "seat_number": "1",
+                          "is_booked": true,
+                          "created_at": "2023-09-11T06:50:56.206245Z",
+                          "updated_at": "2023-09-11T06:50:56.206288Z"
+                      },
+                      {
+                          "prefer_row": "Center",
+                          "prefer_seat": "Aisle",
+                          "seat_number": "6",
+                          "is_booked": true,
+                          "created_at": "2023-09-11T06:50:56.206337Z",
+                          "updated_at": "2023-09-11T06:50:56.206355Z"
+                      }
+                  ],
+                  "total_passengers": 2,
+                  "created_at": "2023-09-11T06:50:56.201649Z",
+                  "updated_at": "2023-09-11T06:50:56.201683Z"
+         }
 
      
 
