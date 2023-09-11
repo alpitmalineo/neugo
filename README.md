@@ -90,7 +90,7 @@ Row Preference: Front (1-4), Center(5-7), Back(8-11)
 
     - Seat Availability GET Endpoint param Request
 
-    - Query Params Input Example:
+    - Input Query Params Example:
           - Note: coach=1,2 means 1=NueGo or 2=GreenG0
           coach=1
           prefer_row=Back
@@ -208,6 +208,78 @@ Row Preference: Front (1-4), Center(5-7), Back(8-11)
                   "updated_at": "2023-09-11T06:50:56.201683Z"
          }
 
-     
+    4.) Bus Availibility endpoint
+    
+      - http://127.0.0.1:8000/v1/bus_availability/     method:GET
+      
+      - Input Query params exmaple:
+           departure_city = 1       1 means city (Abohar)
+           destination_city = 6     6 means city (Amritsar)
+           date = 2023-09-05
+           boarding_point = Abohar bridge
+           bridge&dropping_point = Amritsar Highway
+           departure_time = 03:00:00            this time is between 03:00:00 AM to  22:00:00 PM
+           destination_time =  22:00:00
+
+      - Output Example:
+          {
+            "id": 1,
+            "coach": "NueGO",
+            "departure_city": {
+                "city": "Abohar"
+            },
+            "destination_city": {
+                "city": "Amritsar"
+            },
+            "date": "2023-09-05",
+            "hours": "6h 20m",
+            "boarding_point": "Abohar bridge",
+            "dropping_point": "Amritsar Highway",
+            "departure_time": "06:00:00",
+            "destination_time": "18:00:00",
+            "price": 350
+        }
+
+    5.) User registraion endpoint
+    
+      - http://127.0.0.1:8000/v1/register/    method:POST
+      
+      - Input Example:
+            {
+                "email": "test@gmail.com",
+                "name": "test",
+                "password": "Admin@123"
+            }
+
+      - Output Example:
+            {
+              "id": 3,
+              "email": "test@gmail.com",
+              "name": "test",
+              "is_active": true
+           }
+
+    6.) User login endpoint
+
+       - http://127.0.0.1:8000/v1/login/    method: POST
+
+       - Input Example:
+            {
+              "email": "test@gmail.com",
+              "password": "Admin@123"
+            }
+
+      - Output Example:
+            {
+                "id": 3,
+                "email": "test@gmail.com",
+                "name": "test",
+                "is_active": true
+            }
+    
+         
+           
+           
+      
 
     
