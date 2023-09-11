@@ -14,8 +14,8 @@ class CitySerializer(serializers.ModelSerializer):
 
 
 class BusAvailabilitySerializer(serializers.ModelSerializer):
-    # departure_city = CitySerializer(read_only=True)
-    # destination_city = CitySerializer(read_only=True)
+    departure_city = CitySerializer(read_only=True)
+    destination_city = CitySerializer(read_only=True)
 
     class Meta:
         model = BusAvailability
