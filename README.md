@@ -6,6 +6,9 @@ Example: rowPref=Front, seatPref=Aisle, berthPref=None, is given as input then s
 
 Row Preference: Front (1-4), Center(5-7), Back(8-11)
 
+# Neugo Assignment Docsfile Link
+- https://docs.google.com/document/d/1_AvKwRH560B9G1WHHRFTnx5oRIhYuQuEhyq3o4mHXC4/edit
+
 
 # How to Run this NeuGo Project ?
 
