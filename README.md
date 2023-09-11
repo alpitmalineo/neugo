@@ -123,7 +123,10 @@ Row Preference: Front (1-4), Center(5-7), Back(8-11)
       - http://127.0.0.1:8000/v1/book_seat/   method:POST
       
       - Input Example:
-      - Note here bus:1 is NueGo or bus:2 is GreenGo     
+      - Note here bus:1 is NueGo or bus:2 is GreenGo
+      - If you provide invalid param you got validation error
+        and you try to already booked seat you got reponse "Seats already booked by other."
+        
       - For Single Seat Booking
         {
           "bus": 1,
